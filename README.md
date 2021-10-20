@@ -4,29 +4,30 @@ JAVA VERSİON : 11
 
 POSTMAN CONTROLS
 ****************
-To see the garage contents(Garaj içeriğini görmek için)
+To see the garage contents
 	{GET METHOD} endpoint -> localhost:8082/api/garage/status 
 ******************************************************************************************************
-To see issued tickets(Kesilen biletleri görmek için)
+To see issued tickets
 	{GET METHOD} endpoint -> localhost:8082/api/tickets/status 
 ******************************************************************************************************
-To add a vehicle to the parking lot(Garaja araç eklemek için)
+To add a vehicle to the parking lot
 	{POST METHOD} endpoint -> localhost:8082/api/tickets/create 
 
-		Submitted data must be in this format(Gönderilen JSON bu formatta olmalıdır)
-		                                                               -> {
-                                                           			 "reasonForApplication" : "park",
+		Submitted data must be in this format
+		                              -> {
+                                                   "reasonForApplication" : "park",
    						   "carPlaque" : "34-LO-2000",
    						   "carColor" : "White",
     						   "carType" : "Car"
 						 }
 ******************************************************************************************************	
-To exit from the parking lot, i.e. cancel the issued ticket(Garajdan araba çıkarmak için diyer bir deyim ile bilet iptali için)
+To exit from the parking lot, i.e. cancel the issued ticket
 	{POST METHOD} endpoint -> localhost:8082/api/tickets/delete
 
-		!Enter parameters with postman key and value(Parametre olarak girilecek araç plakası POSTMAN key, value kısmından girilmelidir.)
-		!Endpoint should be like this (localhost:8082/api/tickets/delete?carPlaque=34-LO-2000) (Örnek endpoint)
+		!Enter parameters with postman key and value
+		!Endpoint should be like this (localhost:8082/api/tickets/delete?carPlaque=34-LO-2000)
 ******************************************************************************************************
+
 NOTES
 
 #Since a database was not desired, I used a hashMap<Integer, Vehicle> for the garage on inMemory and a List<Ticket> on inMemory to see the tickets that were cut.
