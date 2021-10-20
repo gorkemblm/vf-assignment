@@ -14,12 +14,12 @@ To add a vehicle to the parking lot
 	{POST METHOD} endpoint -> localhost:8082/api/tickets/create 
 
 		Submitted data must be in this format
-		                              -> {
-                                                   "reasonForApplication" : "park",
-   						   "carPlaque" : "34-LO-2000",
-   						   "carColor" : "White",
-    						   "carType" : "Car"
-						 }
+						      -> {
+							   "reasonForApplication" : "park",
+							   "carPlaque" : "34-LO-2000",
+							   "carColor" : "White",
+							   "carType" : "Car"
+							 }
 ******************************************************************************************************	
 To exit from the parking lot, i.e. cancel the issued ticket
 	{POST METHOD} endpoint -> localhost:8082/api/tickets/delete
